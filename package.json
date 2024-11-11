@@ -1,6 +1,6 @@
 {
-  "name": "@balancer-team/quickbooks",
-  "version": "0.0.14",
+  "name": "@romanzubenko_afternoon/quickbooks",
+  "version": "0.0.15",
   "description": "QuickBooks JavaScript Client",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -11,7 +11,7 @@
     "build": "tsc",
     "test": "node --require ts-node/register --test test/*.test.ts"
   },
-  "author": "Alan Hettinger",
+  "author": "Roman Zubenko",
   "license": "MIT",
   "devDependencies": {
     "ts-node": "^10.9.2",
@@ -20,8 +20,7 @@
   "dependencies": {
     "zod": "^3.23.8"
   },
-  "repository": "github:balancer-team/quickbooks-js",
-  "homepage": "https://www.balancer.team",
+  "repository": "github:romanzubenko_afternoon/quickbooks-js",
   "keywords": [
     "quickbooks",
     "intuit",
