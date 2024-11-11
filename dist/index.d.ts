@@ -37,5 +37,10 @@ export declare class QuickBooks {
         endpoint: string;
         body: any;
     }): Promise<any>;
+    get({ token, endpoint, params }: {
+        token: any;
+        endpoint: string;
+        params?: { [key: string]: any };
+    }): Promise<any>;
     revokeAccess(token: Token): Promise<unknown>;
 }

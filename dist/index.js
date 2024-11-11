@@ -202,6 +202,18 @@ class QuickBooks {
         const data = await res.json();
         return data;
     }
+    async get({ token, endpoint, params }) {
+        token = await this.getValidToken(token);
+        const url = `${this.apiBaseUrl}/v3/company/${token.realm_id}${endpoint}?${node_querystring_1.default.encode(params)}`;
+        const res = await fetch(url, {
+            headers: {
+                Authorization: `Bearer ${token.access_token}`,
+                Accept: 'application/json',
+            },
+        });
+        const data = await res.json();
+        return data;
+    }
     async revokeAccess(token) {
         const body = { token: token.access_token };
         const res = await fetch(this.revokeEndpoint, {
